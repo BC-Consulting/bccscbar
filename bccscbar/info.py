@@ -91,7 +91,9 @@ def Usage():
            <li>The resolution of the colour scale bar image is 72 dpi.</li>
         </ul>
         <p>For more info please see
-            <a href="http://www.bc-consult.com/free/bccscbar.html">here</a></p>
+           <a href="http://www.bc-consult.com/free/bccscbar.html">here</a>.</p>
+        <p>To report a bug go to the 
+           <a href="http://hub.qgis.org/projects/bccscbar">bug tracker</a>.</p>
         <hr>
         <p align="center"><a href="http://www.bc-consult.com/">
         BC-Consulting</a><br />
