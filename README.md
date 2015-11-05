@@ -1,3 +1,13 @@
+<!-- bccscbar logo -->
+[bccscbar_logo]: http://www.bc-consult.com/res/img/bccscbar.png
+
+<!-- ex1 -->
+[ex1]: http://www.bc-consult.com/res/img/DEM_Hscalebar.png
+
+<!-- ex2 -->
+[ex2]: http://www.bc-consult.com/res/img/DEM_Vscalebar.png
+
+![][bccscbar_logo]
 # bccscbar
 
 Colour Scale Bar is a QGIS V2.x plugin.
@@ -6,7 +16,19 @@ Generates a colour scale bar image file from a one-band raster file or from its 
 
 ---
 
-Folder structure:
+##Examples
+
+Horizontal scale bar:
+
+![][ex1]
+
+Vertical scale bar:
+
+![][ex2]
+
+---
+
+##Folder structure:
 
 - bccscbar: files that made up the plugin. This the distribution folder that will be zipped for upload to the QGIS repository.
 
@@ -14,3 +36,6 @@ Folder structure:
 
 - doc: the documentation about the plugin.
 
+---
+
+Last updated: 5 Nov 2015
