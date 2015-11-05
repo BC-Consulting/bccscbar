@@ -1,0 +1,47 @@
+﻿#
+#    This is "bccscbar": a colour scale bar plugin for QGIS 1.5
+#
+#    bccscbar is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    bccscbar is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with bccscbar.  If not, see <http://www.gnu.org/licenses/>.
+#
+#===============================================================================
+# WARNING: this code is not pythonic at all. I'm in no way a python programmer..
+#          corrections are more than welcome if properly explained.
+#          (trying to learn by mistakes!)
+#===============================================================================
+#V0.10. - 5 November 2015
+#V0.0.1 - 8 August 2010
+#===============================================================================
+#
+#  bccscbar is made of the following files:
+#
+#__init__.py
+#  loader for the plugin
+#
+#bccscbar.py
+#  This is the entry module. It sets up the dialog window and open it.
+#
+#cdlgSCBR.py
+#  This is the dialog window where user set parameters and create the scale bar
+#  file.
+#
+#info.py
+#  This is the file where all info about bccscbar is located.
+#
+#utils.py
+#  This is a collection of helper functions.
+#
+#resources.py & ui_dialogScaleBar
+#  Qt files.
+#
+#======================================================================================
