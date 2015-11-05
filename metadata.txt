@@ -1,0 +1,69 @@
+# bccScaleBar: a plugin to create an image of a scalebar from QML files.
+#
+# Mandatory items:
+
+[general]
+name=Colour Scale Bar
+qgisMinimumVersion=2.0
+description=Generates a colour scale bar image file.
+version=0.10.0
+author=BC Consulting and Thomas Wahlmuller
+email=info@bc-consult.com
+
+# End of mandatory metadata
+
+# Optional items:
+
+# Uncomment the following line and add your changelog:
+changelog=MODIFICATION 2015-11-05
+    By: BC Consulting
+    Description:
+    Add some logic on selection/deselection of current raster.
+    Tweak ui for beter rendering on different os'es.
+    ...........................................................................
+    MODIFICATION 2015-11-04
+    By: BC Consulting
+    Description:
+    Add an option to use the colour ramp of the selected one-band raster instead
+    of having to select a file.
+    ...........................................................................
+    MODIFICATION 2015-10-28
+    By: BC Consulting
+    Description:
+    Hopefully this is a fix for the unresponsive user interface!!!
+    ...........................................................................
+    MODIFICATION 2015-05-09
+    By: BC COnsulting
+    Contact: see above
+    Description:
+    Internationalisation and re-compilation of dialog, in response to users
+    reporting that the plugin does nothing on their machines.
+    ...........................................................................
+    MODIFICATION 2014-10-06
+    By: BC Consulting
+    Description:
+    Compatibility with QGIS V2.x
+     - Compatible with QMLs from QGIS versions 1.x and 2.x
+    .......................................................................
+    MODIFICATION 2012-03-07 - V0.5
+    By: Thomas Wahlmuller
+    Contact: thomas dot wahlmueller at gmx dot net
+    Description:
+    Plugin is extended to support INTERPOLATION and EXACT styles. Annotate 
+    extrema option is ignored when interpolated. At least two ticks (equals
+    extrema in style) are displayed. EXACT style uses same visualisation as
+    DISCRETE styles.
+
+# Tags are comma separated with spaces allowed
+tags=one-band,raster,colour,scalebar,composer,file,vertical,horizontal,qml
+
+homepage=http://www.bc-consult.com/free/bccscbar.html
+tracker=http://hub.qgis.org/projects/bccscbar
+repository=http://www.bc-consult.com/free/plugins.xml
+icon=bccscbar.png
+
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
