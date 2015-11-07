@@ -60,9 +60,9 @@ class cdlgSCBR(QDialog,Ui_Dialog):
         self.setupUi(self)
         self.iface = iface
         self.canvas = self.iface.mapCanvas()
-        self.fil = ''
-        self.UseCurrentRaster = False
-        self.goout = False
+        self.fil = ''                    # the qml or colour table file (input)
+        self.UseCurrentRaster = False    # flag to tell we are using the current raster
+        self.goout = False               # flag to control execution flow
         #
         for i in range(7,25):
             self.cbFSize.addItem(str(i))
@@ -225,14 +225,75 @@ class cdlgSCBR(QDialog,Ui_Dialog):
     def GetTableFile(self):
         """ get the file name of the colour table to act on """
         #
+        # Delete temp qml file (if it exist)
+        try:
+            if self.UseCurrentRaster and self.fil != '':
+                os.remove(self.fil)
+        except:
+            pass
+        #
+        # Deselect use current raster
+        self.goout = True
+        self.radUseCurrent.setChecked(False)
+        self.goout = False
+        self.UseCurrentRaster = False
+        self.fil = ''
+        #
+        # Ask user for the qml or colour table file
         self.fil = QFileDialog.getOpenFileName(self,
                             "Open a colour table or QML file", self.tbPath,
                             "Colour table files (*.txt *.qml);;All files (*.*)")
-        if str(self.fil) != "": 
+        #
+        if str(self.fil) != "":
+            # Set provided file as source
             self.SetTableFile(self.fil)
-            self.goout = True
-            self.radUseCurrent.setChecked(False)
-            self.goout = False
+        else:
+            # Reset to default
+            self.btnEntry.setText('Click to select a colour table (*.txt) or a QGIS properties file (*.qml)')
+
+#-------------------------------------------------------------------------------
+
+    def SetCurRaster(self):
+        """ Flag to use selected raster """
+        #
+        # Do not re-enter while in the routine
+        if self.goout: return
+        self.goout=True
+        #
+        # Delete temp qml file (if it exist)
+        try:
+            if self.UseCurrentRaster and self.fil != '':
+                os.remove(self.fil)
+                self.UseCurrentRaster = False
+        except:
+            pass
+        #
+        if self.radUseCurrent.isChecked():
+            #Check that the current layer is a one-band raster
+            [flg, theLayer] = uu.checkOneBandLayer(self.iface)
+            if flg:
+                # Yes: try to save a temp qml file
+                [flg, theQML] = uu.saveQML(self.iface, theLayer)
+                if flg:
+                    # Success
+                    self.SetTableFile(theQML)
+                    self.fil = theQML
+                else:
+                    # cannot create temp file: complain to the user
+                    QMessageBox.critical(self,info.MSG_BOX_TITLE, "Cannot use current raster! Load a QML or colour table.")
+                self.UseCurrentRaster = flg
+            else:
+                # No: complain to the user
+                QMessageBox.critical(self,info.MSG_BOX_TITLE, theLayer)
+                self.UseCurrentRaster = False
+                self.radUseCurrent.setChecked(False)
+        else:
+            self.UseCurrentRaster = False
+        #
+        if not self.UseCurrentRaster:
+            self.btnEntry.setText('Click to select a colour table (*.txt) or a QGIS properties file (*.qml)')
+            self.fil = ''
+        self.goout = False
 #-------------------------------------------------------------------------------
 
     def SetTableFile(self, theFile):
@@ -275,38 +336,23 @@ class cdlgSCBR(QDialog,Ui_Dialog):
         if self.txtH.text() == '': self.txtH.setText('20')
 #-------------------------------------------------------------------------------
 
-    def SetCurRaster(self):
-        """ Flag to use selected raster """
-        if self.goout: return
-        self.goout=True
-        #
-        if self.radUseCurrent.isChecked():
-            #
-            [flg, theLayer] = uu.checkOneBandLayer(self.iface)
-            if flg:
-                [flg, theQML] = uu.saveQML(self.iface, theLayer)
-                if flg:
-                    self.SetTableFile(theQML)
-                    self.fil = theQML
-                else:
-                    QMessageBox.critical(self,info.MSG_BOX_TITLE, "Cannot use current raster! Load a QML or colour table.")
-                self.UseCurrentRaster = flg
-            else:
-                QMessageBox.critical(self,info.MSG_BOX_TITLE, theLayer)
-                self.UseCurrentRaster = False
-                self.radUseCurrent.setChecked(False)
-        else:
-            self.UseCurrentRaster = False
-        #
-        if not self.UseCurrentRaster:
-            self.btnEntry.setText('Click to select a colour table (*.txt) or a QGIS properties file (*.qml)')
-            self.fil = ''
-        self.goout = False
-#-------------------------------------------------------------------------------
-
     def helpme(self):
         """ Display a help message about how to use the plugin"""
         #
         QMessageBox.about(self,info.MSG_BOX_TITLE,info.Usage())
+#-------------------------------------------------------------------------------
+
+    def reject(self):
+        """ Exit plugin """
+        #
+        # Delete temp file if it exists
+        try:
+            if self.UseCurrentRaster:
+                os.remove(self.fil)
+        except:
+            pass
+        #
+        # Get out of plugin
+        super(cdlgSCBR, self).reject()
 #
 #===============================================================================

@@ -28,8 +28,8 @@
 import platform
 from PyQt4.QtCore import *
 
-currVersion   = u'0.10.0'
-currDate      = u'05 November 2015'
+currVersion   = u'0.11.0'
+currDate      = u'06 November 2015'
 MSG_BOX_TITLE = u"Colour Scale Bar"
 inMenu        = u"Raster Colours"
 icon          = u":/plugins/bccscbar/res/img/bccscbar.png"
@@ -91,9 +91,7 @@ def Usage():
            <li>The resolution of the colour scale bar image is 72 dpi.</li>
         </ul>
         <p>For more info please see
-           <a href="http://www.bc-consult.com/free/bccscbar.html">here</a>.</p>
-        <p>To report a bug go to the 
-           <a href="http://hub.qgis.org/projects/bccscbar">bug tracker</a>.</p>
+            <a href="http://www.bc-consult.com/free/bccscbar.html">here</a></p>
         <hr>
         <p align="center"><a href="http://www.bc-consult.com/">
         BC-Consulting</a><br />

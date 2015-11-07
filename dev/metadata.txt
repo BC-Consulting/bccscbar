@@ -1,14 +1,26 @@
-# bccScaleBar: a plugin to create an image of a scalebar from one-band rasters.
+# bccScaleBar: a plugin to create an image of a scalebar from QML files.
+#
+# Mandatory items:
 
 [general]
 name=Colour Scale Bar
 qgisMinimumVersion=2.0
 description=Generates a colour scale bar image file.
-about=Generates a colour scale bar image file from a one-band raster file or from its qml file. The generated image can then be used in the Composer as the colour scale bar for that raster.
-version=0.10.0
+version=0.11.0
 author=BC Consulting and Thomas Wahlmuller
 email=info@bc-consult.com
-changelog=MODIFICATION 2015-11-05
+
+# End of mandatory metadata
+
+# Optional items:
+
+# Uncomment the following line and add your changelog:
+changelog=MODIFICATION 2015-11-06
+    By: BC Consulting
+    Description:
+    Remove temporary file(s) when not needed anymore.
+    ...........................................................................
+    MODIFICATION 2015-11-04
     By: BC Consulting
     Description:
     Add some logic on selection/deselection of current raster.
@@ -46,11 +58,17 @@ changelog=MODIFICATION 2015-11-05
     extrema option is ignored when interpolated. At least two ticks (equals
     extrema in style) are displayed. EXACT style uses same visualisation as
     DISCRETE styles.
-experimental=False
-deprecated=False
+
+# Tags are comma separated with spaces allowed
 tags=one-band,raster,colour,scalebar,composer,file,vertical,horizontal,qml
+
 homepage=http://www.bc-consult.com/free/bccscbar.html
-repository=https://github.com/BC-Consulting/bccscbar
 tracker=http://hub.qgis.org/projects/bccscbar
+repository=https://github.com/BC-Consulting/bccscbar
 icon=bccscbar.png
-category=Raster
+
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
