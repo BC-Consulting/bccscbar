@@ -5,11 +5,16 @@ name=Colour Scale Bar
 qgisMinimumVersion=2.0
 description=Generates a colour scale bar image file.
 about=Generates a colour scale bar image file from a one-band raster file or from its qml file. The generated image can then be used in the Composer as the colour scale bar for that raster.
-version=0.11.0
+version=0.12.0
 author=BC Consulting and Thomas Wahlmuller
 email=info@bc-consult.com
 
-changelog=MODIFICATION 2015-11-06
+changelog=MODIFICATION 2016-05-14
+    By: BC Consulting
+    Description:
+    Fixed: An empty title creates an image cut at the top (reported 2015/12/19).
+    ...........................................................................
+    MODIFICATION 2015-11-06
     By: BC Consulting
     Description:
     Remove temporary file(s) when not needed anymore.

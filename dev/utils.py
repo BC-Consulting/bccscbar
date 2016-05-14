@@ -204,7 +204,14 @@ class scalebarVerticalDiscreteAnnotation(QWidget):
                 wi = 0
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
-        #
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
+		#
         L = None
         if str(md.scUnits) != "":
             # unit properties (fixed by plugin)
@@ -518,6 +525,13 @@ class scalebarHorizontalDiscreteAnnotation(QWidget):
                 L = LT.split("\n")
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
         #
         L = None
         if str(md.scUnits) != "":
@@ -874,6 +888,13 @@ class scalebarVerticalInterpolatedAnnotation(QWidget):
                 wi = 0
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
         #
         L = None
         if str(md.scUnits) != "":
@@ -1171,6 +1192,13 @@ class scalebarHorizontalInterpolatedAnnotation(QWidget):
                 wi = 0
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
         #
         L = None
         if str(md.scUnits) != "":
@@ -1469,6 +1497,13 @@ class scalebarVerticalExactAnnotation(QWidget):
                 wi = 0
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
         #
         L = None
         if str(md.scUnits) != "":
@@ -1751,6 +1786,13 @@ class scalebarHorizontalExactAnnotation(QWidget):
                 wi = 0
                 for q in L:
                     wi = max(wi, fm.boundingRect(str(q)).width())
+        else:
+            LT = ""
+            myFNT.setPointSize(int(md.scFontSize))
+            myFNT.setBold( True )
+            myP.setFont(myFNT)
+            fm = QFontMetricsF(myFNT)
+            hi = fm.height()
         #
         L = None
         if str(md.scUnits) != "":

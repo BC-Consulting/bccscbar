@@ -30,7 +30,7 @@ Vertical scale bar:
 
 ##Folder structure:
 
-- bccscbar: files that made up the plugin. This the distribution folder that will be zipped for upload to the QGIS repository.
+- bccscbar: files that made up the plugin. This is the distribution folder that will be zipped for upload to the QGIS repository.
 
 - dev: development folder. The modifications/additions must be made to the files in this folder and later copied to the 'bccscbar' folder to be zipped.
 
@@ -38,4 +38,4 @@ Vertical scale bar:
 
 ---
 
-Last updated: 5 Nov 2015
+Last updated: 14 May 2016
