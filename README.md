@@ -1,11 +1,11 @@
 <!-- bccscbar logo -->
-[bccscbar_logo]: http://www.bc-consult.com/res/img/bccscbar.png
+[bccscbar_logo]: http://www.bc-consult.com/free/img/bccscbar.png
 
 <!-- ex1 -->
-[ex1]: http://www.bc-consult.com/res/img/DEM_Hscalebar.png
+[ex1]: http://www.bc-consult.com/free/img/DEM_Hscalebar.png
 
 <!-- ex2 -->
-[ex2]: http://www.bc-consult.com/res/img/DEM_Vscalebar.png
+[ex2]: http://www.bc-consult.com/free/img/DEM_Vscalebar.png
 
 ![][bccscbar_logo]
 # bccscbar

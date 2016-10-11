@@ -28,8 +28,8 @@
 import platform
 from PyQt4.QtCore import *
 
-currVersion   = u'0.12.0'
-currDate      = u'14 May 2016'
+currVersion   = u'0.12.1'
+currDate      = u'11 October 2016'
 MSG_BOX_TITLE = u"Colour Scale Bar"
 inMenu        = u"Raster Colours"
 icon          = u":/plugins/bccscbar/res/img/bccscbar.png"

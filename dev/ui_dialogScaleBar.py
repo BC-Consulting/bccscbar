@@ -261,4 +261,4 @@ class Ui_Dialog(object):
         self.btnInfo.setText(_translate("Dialog", "Info", None))
         self.btnExit.setText(_translate("Dialog", "Exit", None))
 
-import resources_rc
+import resources
