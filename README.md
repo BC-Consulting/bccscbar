@@ -16,7 +16,7 @@ Generates a colour scale bar image file from a one-band raster file or from its 
 
 ---
 
-##Examples
+## Examples
 
 Horizontal scale bar:
 
@@ -28,7 +28,7 @@ Vertical scale bar:
 
 ---
 
-##Folder structure:
+## Folder structure:
 
 - bccscbar: files that made up the plugin. This is the distribution folder that will be zipped for upload to the QGIS repository.
 
