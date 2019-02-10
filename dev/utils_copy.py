@@ -1,6 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 #
-# Colour Scale Bar (c) BC Consulting 2011
+# Colour Scale Bar (c) BC Consulting 2011 - (c) GeoProc 2019
 #
 #  modified by Thomas Wahlmüller (c) 2012-03-07
 #  contact: thomas dot wahlmueller at gmx dot net

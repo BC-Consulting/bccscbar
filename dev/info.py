@@ -1,8 +1,8 @@
 ﻿# -*- coding: utf-8 -*-
 #
-# Colour Scale Bar (c) BC Consulting 2011
+# Colour Scale Bar (c) BC Consulting 2011 - (c) GeoProc 2019
 #
-#  modified by Thomas Wahlmüller (c) 2012 2012-03-07
+#  modified by Thomas Wahlmüller (c) 2012-03-07
 #  contact: thomas dot wahlmueller at gmx dot net
 #  Added support for INTERPOLATED and EXACT styles. Annotate extrema
 #  is ignored when interpolated. At least two ticks (extrema) are
@@ -28,12 +28,12 @@
 import platform
 from PyQt4.QtCore import *
 
-currVersion   = u'0.12.1'
-currDate      = u'11 October 2016'
+currVersion   = u'0.12.2'
+currDate      = u'10 February 2019'
 MSG_BOX_TITLE = u"Colour Scale Bar"
 inMenu        = u"Raster Colours"
 icon          = u":/plugins/bccscbar/res/img/bccscbar.png"
-Author        = u"BC Consulting - info at bc-consult dot com; Thomas Wahlmüller - thomas dot wahlmueller at gmx dot net"
+Author        = u"GeoProc - info at geoproc dot com; Thomas Wahlmüller - thomas dot wahlmueller at gmx dot net"
 Sinfo         = u"Generates a colour scale bar image file"
 Linfo =(u"This plugin creates a colour scale bar image file (png) for a coloured"
         " 1-band raster. Use the created colour scale bar as legend in print composer.")
@@ -44,7 +44,7 @@ def Usage():
     """ Return usage and info message about the plugin """
     #
     L = """<center><b>Colour Scale Bar</b><br />
-        <i>by BC-Consulting</i><br />
+        <i>by GeoProc</i><br />
         Version: %s<br />
         %s<br />&nbsp;<br />
         Distributed under the <a href="http://www.gnu.org/licenses/">GPL</a>
@@ -91,10 +91,10 @@ def Usage():
            <li>The resolution of the colour scale bar image is 72 dpi.</li>
         </ul>
         <p>For more info please see
-            <a href="http://www.bc-consult.com/free/bccscbar.html">here</a></p>
+            <a href="http://www.geoproc.com/free/bccscbar.html">here</a></p>
         <hr>
-        <p align="center"><a href="http://www.bc-consult.com/">
-        BC-Consulting</a><br />
+        <p align="center"><a href="http://www.geoproc.com/">
+        GeoProc</a><br />
         <i>Python %s - Qt %s - PyQt %s on %s</i></p>
         """ % (str(currVersion), str(currDate), platform.python_version(), \
         QT_VERSION_STR, PYQT_VERSION_STR, platform.system())

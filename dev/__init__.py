@@ -7,38 +7,11 @@
       or a colour table file as created by the plugin:
       "1-band raster colour table".
                            -------------------
-    copyright            : (C) 2011-2015 by BC Consulting
-    email                : info at bc-consult dot com
+    copyright            : (C) 2011-2015 by BC Consulting - (C) 2019 GeoProc
+    email                : info at geoproc dot com
  ***************************************************************************
  ***************************************************************************
- MODIFICATION 2015-05-09
- By: BC COnsulting
- Contact: see above
- 
- Description:
- Internationalisation and re-compilation of dialog, in response to users 
- reporting that the plugin does nothing on their machines.
- ...........................................................................
- 
- MODIFICATION 2014-10-06
- By: BC COnsulting
- Contact: see above
- 
- Description:
- Compatibility with QGIS V2.x
-  - Removed all QString() occurrences!
-  - Compatible with QMLs from QGIS versions 1.x and 2.x
- ...........................................................................
-
- MODIFICATION 2012-03-07
- By: Thomas Wahlmüller
- Contact: thomas dot wahlmueller at gmx dot net
- 
- Description:
- Plugin is extended to support INTERPOLATION and EXACT styles. Annotate 
- extrema option is ignored when interpolated. At least two ticks (equals
- extrema in style) are displayed. EXACT style uses same visualisation as
- DISCRETE styles.
+ HISTORY: see metadata.txt
  
  ***************************************************************************
  ***************************************************************************

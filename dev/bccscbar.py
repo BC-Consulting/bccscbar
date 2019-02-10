@@ -1,6 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 #
-# Colour Scale Bar (c) BC Consulting 2011
+# Colour Scale Bar (c) BC Consulting 2011 - (c) GeoProc 2019
 #
 #    This file is part of "bccscbar"
 #
